@@ -1,7 +1,6 @@
 # Team
 
 * 2016006580 Han Yejin
-(In my computer, maven has a problem when I run a test of my code. I spent more than 2 days to solve this problem but I can't, so I just submit the java file, not the jar file. Also, because of that I submitted my stage 1 assignment too late. I feel really sorry.)
 
 # How to submit your project output for each stage
 1. Open <code>pom.xml</code> and change the artifect ID from <code>2016000000</code> to your student ID.
