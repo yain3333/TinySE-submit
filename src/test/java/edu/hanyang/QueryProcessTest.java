@@ -21,7 +21,9 @@ import edu.hanyang.submit.TinySEQueryProcess;
 import edu.hanyang.utils.TestDocCursor;
 import edu.hanyang.utils.TestIntermediateList;
 import edu.hanyang.utils.TestIntermediatePositionalList;
+import org.junit.Ignore;
 
+@Ignore("Delete this line to unit test stage 1")
 public class QueryProcessTest {
 	List<List<Integer>> posList = null;
 	TinySEQueryProcess qp = null;

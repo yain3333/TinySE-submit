@@ -33,7 +33,8 @@ public class TinySETokenizer implements Tokenizer {
 			while(tokenStream.incrementToken())
 			{
 				result.add(attr.toString());
-			}  
+			} 
+			tokenStream.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
