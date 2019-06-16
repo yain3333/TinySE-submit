@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: edu.hanyang.ExternalSortTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.097 s <<< FAILURE! - in edu.hanyang.ExternalSortTest
-TestSort(edu.hanyang.ExternalSortTest)  Time elapsed: 0.046 s  <<< ERROR!
-java.io.FileNotFoundException: C:\Users\%EA%B9%80%EB%8C%80%EC%97%BD\TinySE-submit\target\test-classes\test.data (지정된 경로를 찾을 수 없습니다)
-	at edu.hanyang.ExternalSortTest.TestSort(ExternalSortTest.java:40)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 s - in edu.hanyang.ExternalSortTest

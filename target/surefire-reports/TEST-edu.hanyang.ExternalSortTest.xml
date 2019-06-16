@@ -1,68 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="edu.hanyang.ExternalSortTest" time="0.097" tests="1" errors="1" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="edu.hanyang.ExternalSortTest" time="0.001" tests="1" errors="0" skipped="1" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
-    <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="java.specification.version" value="1.8"/>
+    <property name="java.specification.version" value="12"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="MS949"/>
     <property name="java.class.path" value="C:\Users\김대엽\TinySE-submit\target\test-classes;C:\Users\김대엽\TinySE-submit\target\classes;C:\Users\김대엽\.m2\repository\org\apache\lucene\lucene-analyzers-common\7.2.1\lucene-analyzers-common-7.2.1.jar;C:\Users\김대엽\.m2\repository\org\apache\lucene\lucene-core\7.2.1\lucene-core-7.2.1.jar;C:\Users\김대엽\.m2\repository\org\apache\commons\commons-lang3\3.7\commons-lang3-3.7.jar;C:\Users\김대엽\TinySE-submit\lib\tinyse-2019.stage_1.build_1.jar;C:\Users\김대엽\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\김대엽\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
-    <property name="java.vendor.url" value="http://java.oracle.com/"/>
-    <property name="user.timezone" value=""/>
-    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="os.name" value="Windows 8.1"/>
-    <property name="user.country" value="KR"/>
+    <property name="java.vm.specification.version" value="12"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\김대엽\AppData\Local\Temp\surefire7294759671189807273\surefirebooter2757544224163271400.jar C:\Users\김대엽\AppData\Local\Temp\surefire7294759671189807273 2019-05-16T23-58-56_069-jvmRun1 surefire7530372423172406731tmp surefire_04342378019586260568tmp"/>
+    <property name="user.country" value="KR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-12.0.1\bin"/>
+    <property name="sun.java.command" value="C:\Users\김대엽\AppData\Local\Temp\surefire11070235371204092996\surefirebooter4086133114868416362.jar C:\Users\김대엽\AppData\Local\Temp\surefire11070235371204092996 2019-06-16T23-34-37_258-jvmRun1 surefire9146270720382604992tmp surefire_05046763336181251198tmp"/>
+    <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\김대엽\TinySE-submit\target\test-classes;C:\Users\김대엽\TinySE-submit\target\classes;C:\Users\김대엽\.m2\repository\org\apache\lucene\lucene-analyzers-common\7.2.1\lucene-analyzers-common-7.2.1.jar;C:\Users\김대엽\.m2\repository\org\apache\lucene\lucene-core\7.2.1\lucene-core-7.2.1.jar;C:\Users\김대엽\.m2\repository\org\apache\commons\commons-lang3\3.7\commons-lang3-3.7.jar;C:\Users\김대엽\TinySE-submit\lib\tinyse-2019.stage_1.build_1.jar;C:\Users\김대엽\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\김대엽\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\김대엽"/>
     <property name="user.language" value="ko"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_201\jre"/>
-    <property name="basedir" value="C:\Users\김대엽\TinySE-submit"/>
+    <property name="java.version.date" value="2019-04-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-12.0.1"/>
     <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\김대엽\TinySE-submit"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\김대엽\AppData\Local\Temp\surefire7294759671189807273\surefirebooter2757544224163271400.jar"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_201\jre\classes"/>
+    <property name="surefire.real.class.path" value="C:\Users\김대엽\AppData\Local\Temp\surefire11070235371204092996\surefirebooter4086133114868416362.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="1.8.0_201-b09"/>
+    <property name="java.runtime.version" value="12.0.1+12"/>
     <property name="user.name" value="김대엽"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="6.3"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\endorsed"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="MS949"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="localRepository" value="C:\Users\김대엽\.m2\repository"/>
-    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\김대엽\AppData\Local\Temp\"/>
-    <property name="java.version" value="1.8.0_201"/>
+    <property name="java.version" value="12.0.1"/>
     <property name="user.dir" value="C:\Users\김대엽\TinySE-submit"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\김대엽\bin;C:\Program Files (x86)\Git\mingw64\bin;C:\Program Files (x86)\Git\usr\local\bin;C:\Program Files (x86)\Git\usr\bin;C:\Program Files (x86)\Git\usr\bin;C:\Program Files (x86)\Git\mingw64\bin;C:\Program Files (x86)\Git\usr\bin;C:\Users\김대엽\bin;C:\apache-maven-3.5.2\bin;C:\Program Files\Java\jdk1.8.0_201;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Simply Fortran 2\mingw-w64\bin;C:\Program Files (x86)\Simply Fortran 2\mingw-w64\x86_64-w64-mingw32\lib32;C:\Program Files (x86)\Simply Fortran 2\mingw-w64\x86_64-w64-mingw32\lib64;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Users\김대엽\AppData\Local\Programs\Python\Python36\Scripts;C:\Users\김대엽\AppData\Local\Programs\Python\Python36;C:\Users\김대엽\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\김대엽\AppData\Local\Programs\Python\Python37;C:\Program Files (x86)\Graphviz2.38\bin\bin;&lt;C;C:\Program Files (x86)\Git\MinGW&gt;\bin;C:\Program Files (x86)\Git\usr\bin\vendor_perl;C:\Program Files (x86)\Git\usr\bin\core_perl;."/>
-    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-12.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\김대엽\bin;C:\Program Files (x86)\Git\mingw64\bin;C:\Program Files (x86)\Git\usr\local\bin;C:\Program Files (x86)\Git\usr\bin;C:\Program Files (x86)\Git\usr\bin;C:\Program Files (x86)\Git\mingw64\bin;C:\Program Files (x86)\Git\usr\bin;C:\Users\김대엽\bin;C:\apache-maven-3.5.2\bin;C:\Program Files\Java\jdk-12.0.1\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Simply Fortran 2\mingw-w64\bin;C:\Program Files (x86)\Simply Fortran 2\mingw-w64\x86_64-w64-mingw32\lib32;C:\Program Files (x86)\Simply Fortran 2\mingw-w64\x86_64-w64-mingw32\lib64;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Users\김대엽\AppData\Local\Programs\Python\Python36\Scripts;C:\Users\김대엽\AppData\Local\Programs\Python\Python36;C:\Users\김대엽\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\김대엽\AppData\Local\Programs\Python\Python37;C:\Program Files (x86)\Graphviz2.38\bin\bin;&lt;C;C:\Program Files (x86)\Git\MinGW&gt;\bin;C:\Program Files (x86)\Git\usr\bin\vendor_perl;C:\Program Files (x86)\Git\usr\bin\core_perl;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="25.201-b09"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="java.vm.version" value="12.0.1+12"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="52.0"/>
+    <property name="java.class.version" value="56.0"/>
   </properties>
-  <testcase name="TestSort" classname="edu.hanyang.ExternalSortTest" time="0.046">
-    <error message="C:\Users\%EA%B9%80%EB%8C%80%EC%97%BD\TinySE-submit\target\test-classes\test.data (지정된 경로를 찾을 수 없습니다)" type="java.io.FileNotFoundException">java.io.FileNotFoundException: C:\Users\%EA%B9%80%EB%8C%80%EC%97%BD\TinySE-submit\target\test-classes\test.data (지정된 경로를 찾을 수 없습니다)
-	at edu.hanyang.ExternalSortTest.TestSort(ExternalSortTest.java:40)
-</error>
+  <testcase name="edu.hanyang.ExternalSortTest" classname="edu.hanyang.ExternalSortTest" time="0">
+    <skipped message="Delete this line to unit test stage 2"/>
   </testcase>
 </testsuite>

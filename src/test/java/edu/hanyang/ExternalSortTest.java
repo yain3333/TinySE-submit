@@ -14,7 +14,7 @@ import org.junit.Test;
 
 import edu.hanyang.submit.TinySEExternalSort;
 
-//@Ignore("Delete this line to unit test stage 2")
+@Ignore("Delete this line to unit test stage 2")
 public class ExternalSortTest {
 	@Before
 	public void init() {
@@ -31,9 +31,10 @@ public class ExternalSortTest {
 		int nblocks = 160;
 		ClassLoader classLoader = this.getClass().getClassLoader();
 		File infile = new File(classLoader.getResource("test.data").getFile());
+		System.out.println(classLoader.getResource("test.data"));
 		String outfile = "./tmp/sorted.data";
 		String tmpdir = "./tmp";
-		File resultFile = new File(outfile);
+		File resultFile = new File(outfile); 
 		
 		TinySEExternalSort sort = new TinySEExternalSort();
 		long timestamp = System.currentTimeMillis();
@@ -42,6 +43,7 @@ public class ExternalSortTest {
 
 		
 		File answerFile = new File(classLoader.getResource("answer.data").getFile());
+		System.out.println(classLoader.getResource("answer.data"));
 		DataInputStream resultInputStream = new DataInputStream(new BufferedInputStream(new FileInputStream(resultFile)));
 		DataInputStream answerInputStream = new DataInputStream(new BufferedInputStream(new FileInputStream(answerFile)));
 

@@ -53,7 +53,7 @@ public class TinySEExternalSort implements ExternalSort {
 	
 	public void sort(String infile, String outfile, String tmpdir, int blocksize, int nblocks) throws IOException {
 		
-		int nElement = (blocksize * nblocks) / 12;
+		int nElement = (blocksize * nblocks) / ((Integer.SIZE / Byte.SIZE) * 3);
 		
 		// 1) initial phase
 		ArrayList<MutableTriple<Integer, Integer, Integer>> dataArr = new ArrayList<>(nElement);
@@ -84,10 +84,9 @@ public class TinySEExternalSort implements ExternalSort {
 				dos.writeInt(tmp2.getMiddle());
 				dos.writeInt(tmp2.getRight());
 			}
-			dos.flush();
+			
 			dataArr.clear();
 			dos.close();
-
 		}
 
 		dis.close();
@@ -106,31 +105,34 @@ public class TinySEExternalSort implements ExternalSort {
 				files.add(dos);			
 			}
 			
-			n_way_merge(files, outputFile, blocksize);
+			merge_nonstep(files, outputFile, blocksize);
 			
             files.clear();
 		}
 		else {
 			int cnt = 0;
+			int stage = 0;
 			for (File f : fileArr) {
 				DataInputStream dos = new DataInputStream(new BufferedInputStream(
-														new FileInputStream (f.getAbsolutePath()),blocksize));
+														new FileInputStream(f.getAbsolutePath()),blocksize));
 				files.add(dos);	
 				cnt++;
-				if (cnt == Nblocks - 1) {
-					n_way_merge(files, outputFile, blocksize); //fill in the blank
+				if (cnt == nblocks - 1) {
+					n_way_merge(files, tmpDir + File.separator + String.valueOf(step+1), blocksize, stage); //fill in the blank
+					stage++;
+					cnt = 0;
 					files.clear();
 				}
 			}
 			if (files.size() != 0) {
-				n_way_merge(files, outputFile, blocksize); //fill in the blank
+				n_way_merge(files, tmpDir + File.separator + String.valueOf(step+1), blocksize, stage); //fill in the blank
 				files.clear();
 			}
 			_externalMergeSort(tmpDir, outputFile, step+1, nblocks, blocksize);
 		}
 	}
 		
-		public void n_way_merge(List<DataInputStream> files, String outputFile, int blocksize) throws IOException {
+		public void n_way_merge(List<DataInputStream> files, String outputFile, int blocksize, int step) throws IOException {
 			
 			PriorityQueue<DataManager> queue = new PriorityQueue<> (files.size(), new Comparator<DataManager>() {
 				public int compare(DataManager o1, DataManager o2) {
@@ -139,7 +141,7 @@ public class TinySEExternalSort implements ExternalSort {
 			});
 			
 			DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(
-					new FileOutputStream(outputFile),blocksize));
+					new FileOutputStream(outputFile+File.separator+String.valueOf(step)+".data"),blocksize));
 			
 			ArrayList<MutableTriple<Integer, Integer, Integer>> output = new ArrayList<>();
 			
@@ -152,9 +154,6 @@ public class TinySEExternalSort implements ExternalSort {
 				MutableTriple<Integer, Integer, Integer> tmp = dm.getTuple();
 				output.add(tmp);
 
-				if(!dm.isEmpty()){
-					queue.add(dm);
-				}
 				if(output.size() == files.size()){
 					 dos.writeInt(tmp.getLeft());
 		             dos.writeInt(tmp.getMiddle());
@@ -162,8 +161,51 @@ public class TinySEExternalSort implements ExternalSort {
 
 		             dos.flush();
 				}
+
+				if(!dm.isEmpty()){
+					queue.add(dm);
+				}
+				
 				dos.close();
 			}
 		}
+		
+	public void merge_nonstep(List<DataInputStream> files, String outputFile, int blocksize) throws IOException {
+				
+				PriorityQueue<DataManager> queue = new PriorityQueue<> (files.size(), new Comparator<DataManager>() {
+					public int compare(DataManager o1, DataManager o2) {
+						return o1.tuple.compareTo(o2.tuple);
+					}
+				});
+				
+				DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(
+						new FileOutputStream(outputFile),blocksize));
+				
+				ArrayList<MutableTriple<Integer, Integer, Integer>> output = new ArrayList<>();
+				
+				for(DataInputStream f : files){
+					queue.add(new DataManager(f));
+				}
+				
+				while (queue.size() != 0) {
+					DataManager dm = queue.poll();
+					MutableTriple<Integer, Integer, Integer> tmp = dm.getTuple();
+					output.add(tmp);
+	
+					if(output.size() == files.size()){
+						 dos.writeInt(tmp.getLeft());
+			             dos.writeInt(tmp.getMiddle());
+			             dos.writeInt(tmp.getRight());
+	
+			             dos.flush();
+					}
+	
+					if(!dm.isEmpty()){
+						queue.add(dm);
+					}
+					
+					dos.close();
+				}
+			}
 }
 // It does not work...

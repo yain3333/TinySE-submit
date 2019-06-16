@@ -14,7 +14,7 @@ public class BPlusTreeTest {
  
 	@Test
 	public void bPlusTreeTest() throws IOException {
-		String metapath = "./tmp/bplustree.meta";
+		String metapath = "./tmp/bplustree.tree";
 		String savepath = "./tmp/bplustree.tree";
 		int blocksize = 52;
 		int nblocks = 10;
